@@ -70,7 +70,7 @@ namespace HotChocolate.Validation
 
         private static bool IsTypeNameField(string fieldName)
         {
-            return fieldName.EqualsOrdinal(IntrospectionFields.TypeName);
+            return fieldName.EqualsOrdinal(IntrospectionFieldNames.TypeName);
         }
     }
 }

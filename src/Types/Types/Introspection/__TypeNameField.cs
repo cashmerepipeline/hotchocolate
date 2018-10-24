@@ -4,7 +4,7 @@ namespace HotChocolate.Types.Introspection
         : ObjectField
     {
         internal __TypeNameField()
-           : base(IntrospectionFields.TypeName, d =>
+           : base(IntrospectionFieldNames.TypeName, d =>
            {
                d.Description("The name of the current Object type at runtime.")
                    .Type<NonNullType<StringType>>()

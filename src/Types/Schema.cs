@@ -7,6 +7,7 @@ using HotChocolate.Utilities;
 using HotChocolate.Runtime;
 using HotChocolate.Types;
 using HotChocolate.Types.Introspection;
+using HotChocolate.Language;
 
 namespace HotChocolate
 {
@@ -200,6 +201,21 @@ namespace HotChocolate
         {
             return _directiveTypes
                 .TryGetValue(directiveName, out directiveType);
+        }
+
+        public ObjectType GetOperationType(OperationType operation)
+        {
+            switch (operation)
+            {
+                case Language.OperationType.Query:
+                    return QueryType;
+                case Language.OperationType.Mutation:
+                    return MutationType;
+                case Language.OperationType.Subscription:
+                    return SubscriptionType;
+                default:
+                    throw new NotSupportedException();
+            }
         }
 
         public void Dispose()

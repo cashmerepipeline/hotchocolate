@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using HotChocolate.Configuration;
+using HotChocolate.Language;
 using HotChocolate.Runtime;
 using HotChocolate.Types;
 
@@ -134,5 +135,7 @@ namespace HotChocolate
         bool TryGetDirectiveType(
             string directiveName,
             out DirectiveType directiveType);
+
+        ObjectType GetOperationType(OperationType operation);
     }
 }

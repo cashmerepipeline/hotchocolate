@@ -19,6 +19,7 @@ namespace HotChocolate.Execution
         }
 
         public string FieldName { get; }
+
         public IReadOnlyCollection<Location> Locations { get; }
     }
 }

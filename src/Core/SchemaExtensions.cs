@@ -104,20 +104,5 @@ namespace HotChocolate
                 .GetAwaiter()
                 .GetResult();
         }
-
-        public static ObjectType GetOperationType(this ISchema schema, OperationType operation)
-        {
-            switch (operation)
-            {
-                case Language.OperationType.Query:
-                    return schema.QueryType;
-                case Language.OperationType.Mutation:
-                    return schema.MutationType;
-                case Language.OperationType.Subscription:
-                    return schema.SubscriptionType;
-                default:
-                    throw new NotSupportedException();
-            }
-        }
     }
 }

@@ -25,6 +25,7 @@ namespace HotChocolate.Execution
         }
 
         public int Line { get; }
+
         public int Column { get; }
     }
 }

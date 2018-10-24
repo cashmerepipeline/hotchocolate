@@ -2,7 +2,7 @@ using System;
 
 namespace HotChocolate.Utilities
 {
-    internal static class StringExtensions
+    public static class StringExtensions
     {
         public static bool EqualsOrdinal(this string x, string y)
         {
